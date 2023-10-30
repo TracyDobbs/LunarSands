@@ -1,0 +1,165 @@
+[gd_scene load_steps=17 format=3 uid="uid://rmls7jrp3gke"]
+
+[ext_resource type="Script" path="res://scripts/PlayerPositionHandler.gd" id="1_1vqq2"]
+[ext_resource type="Script" path="res://scripts/LevelData.gd" id="1_67sli"]
+[ext_resource type="Script" path="res://scripts/PlayerStateHandler.gd" id="1_e0js0"]
+[ext_resource type="Texture2D" uid="uid://0d8sp63mq03d" path="res://tiles/DungeonTileset_v2.4.png" id="4_sc0pe"]
+[ext_resource type="PackedScene" uid="uid://dihmfho2fueh" path="res://scenes/interactables/door.tscn" id="5_t4o1x"]
+[ext_resource type="PackedScene" uid="uid://f7yllpirwvd" path="res://scenes/interactables/lever.tscn" id="5_uio03"]
+[ext_resource type="PackedScene" uid="uid://dw2ps04ckfuwm" path="res://scenes/npcs/enemies/enemy.tscn" id="6_kue8q"]
+[ext_resource type="Script" path="res://scripts/FollowPlayer.gd" id="6_lb7ar"]
+[ext_resource type="PackedScene" uid="uid://ce7upepng8cjm" path="res://scenes/ui/ui.tscn" id="10_fk703"]
+[ext_resource type="PackedScene" uid="uid://cc6tfky3m4rdl" path="res://scenes/interactables/test_collectable.tscn" id="12_74gum"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ek16k"]
+texture = ExtResource("4_sc0pe")
+texture_region_size = Vector2i(32, 32)
+
+[sub_resource type="TileSet" id="TileSet_mvh0l"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+navigation_layer_0/layers = 1
+custom_data_layer_0/name = "moonlight"
+custom_data_layer_0/type = 1
+sources/0 = SubResource("TileSetAtlasSource_ek16k")
+
+[sub_resource type="GDScript" id="GDScript_bcej1"]
+script/source = "extends Timer
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="Animation" id="Animation_414xr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(144, 144)]
+}
+
+[sub_resource type="Animation" id="Animation_wj6ak"]
+resource_name = "floating"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(144, 140), Vector2(144, 146.02), Vector2(144, 140)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dmfwa"]
+_data = {
+"RESET": SubResource("Animation_414xr"),
+"floating": SubResource("Animation_wj6ak")
+}
+
+[node name="TestRoom" type="Node2D"]
+script = ExtResource("1_67sli")
+
+[node name="UI" parent="." instance=ExtResource("10_fk703")]
+
+[node name="GeneralMechanics" type="Node2D" parent="."]
+script = ExtResource("1_1vqq2")
+
+[node name="TileMap" type="TileMap" parent="GeneralMechanics"]
+tile_set = SubResource("TileSet_mvh0l")
+format = 2
+layer_0/name = "1"
+layer_0/tile_data = PackedInt32Array(65537, 131072, 3, 65538, 65536, 3, 65539, 65536, 3, 65540, 65536, 3, 65541, 65536, 3, 65542, 65536, 3, 65543, 65536, 1, 65544, 65536, 1, 65545, 65536, 1, 65546, 65536, 3, 65547, 65536, 3, 65548, 65536, 3, 65549, 65536, 3, 131085, 65536, 1, 196621, 65536, 1, 262157, 65536, 1, 327693, 262144, 0, 393229, 262144, 0, 458765, 262144, 0, 458764, 262144, 0, 458763, 262144, 0, 458762, 65536, 1, 458761, 65536, 1, 458760, 65536, 1, 458759, 65536, 1, 458758, 65536, 1, 458757, 65536, 1, 458756, 65536, 1, 458755, 65536, 1, 458754, 65536, 1, 458753, 0, 3, 393217, 0, 3, 393218, 196608, 5, 393219, 262144, 5, 393220, 262144, 5, 393221, 262144, 5, 393222, 327680, 5, 393223, 65536, 1, 393224, 65536, 1, 393225, 65536, 1, 393226, 65536, 1, 393227, 262144, 0, 393228, 262144, 0, 327692, 262144, 0, 327691, 262144, 0, 327690, 65536, 1, 327689, 65536, 1, 327688, 65536, 1, 327687, 65536, 1, 327686, 327680, 4, 327685, 65536, 1, 327684, 65536, 1, 327683, 262144, 4, 327682, 196608, 4, 327681, 0, 3, 262145, 0, 3, 262146, 196608, 4, 262147, 65536, 1, 262148, 65536, 1, 262149, 65536, 1, 262150, 65536, 1, 262151, 65536, 1, 262152, 65536, 1, 262153, 65536, 1, 262154, 65536, 1, 262155, 65536, 1, 262156, 65536, 1, 196620, 65536, 1, 196619, 65536, 1, 196618, 65536, 1, 196617, 65536, 1, 196611, 262144, 4, 196610, 196608, 4, 196612, 65536, 1, 196613, 65536, 1, 196614, 327680, 4, 196615, 65536, 1, 196616, 65536, 1, 131082, 65536, 1, 131083, 65536, 1, 131084, 65536, 1, 131081, 65536, 1, 131080, 65536, 1, 131079, 65536, 1, 131078, 327680, 3, 131077, 262144, 3, 131076, 262144, 3, 131075, 262144, 3, 131074, 196608, 3, 131073, 0, 3, 196609, 0, 3, 1, 65536, 0, 2, 65536, 0, 3, 65536, 0, 4, 65536, 0, 5, 65536, 0, 6, 65536, 0, 7, 327680, 4, 8, 196608, 4, 9, 65536, 0, 10, 65536, 0, 11, 65536, 0, 12, 65536, 0, 13, 65536, 0, 65550, 131072, 1, 131086, 131072, 1, 196622, 131072, 1, 262158, 131072, 1, 327694, 131072, 1, 393230, 131072, 1, 458766, 131072, 1, 524301, 65536, 2, 524300, 65536, 2, 524299, 65536, 2, 524298, 65536, 2, 524297, 65536, 2, 524296, 65536, 2, 524295, 65536, 2, 524294, 65536, 2, 524293, 65536, 2, 524292, 65536, 2, 524291, 65536, 2, 524290, 65536, 2, 524289, 65536, 2, 458752, 0, 1, 393216, 0, 1, 327680, 0, 1, 262144, 0, 1, 196608, 0, 1, 131072, 0, 1, 65536, 0, 1, 0, 0, 0, 14, 131072, 0, 524302, 131072, 2, 524288, 0, 2, -65528, 196608, 4, -131064, 196608, 4, -65529, 327680, 4, -131065, 327680, 4, -196601, 65536, 1, -196600, 65536, 1, -196599, 65536, 1, -196602, 65536, 1, -131066, 65536, 2, -131063, 65536, 2, -131067, 65536, 2, -131062, 65536, 2, -131068, 65536, 2, -131061, 65536, 2, -131060, 131072, 2, -131069, 0, 2, -196605, 0, 1, -262141, 0, 1, -327677, 0, 1, -393213, 0, 1, -458749, 0, 1, -524285, 0, 0, -524276, 131072, 0, -458740, 131072, 1, -393204, 131072, 1, -327668, 131072, 1, -262132, 131072, 1, -196596, 131072, 1, -524284, 65536, 0, -524283, 65536, 0, -524282, 65536, 0, -524281, 65536, 0, -524280, 65536, 0, -524279, 65536, 0, -524278, 65536, 0, -524277, 65536, 0, -196603, 65536, 1, -196604, 0, 3, -262140, 0, 3, -262139, 65536, 1, -262138, 65536, 1, -262137, 65536, 1, -327673, 65536, 1, -327672, 65536, 1, -327671, 65536, 1, -327670, 65536, 1, -262134, 65536, 1, -262133, 65536, 1, -196597, 65536, 1, -196598, 65536, 1, -262135, 65536, 1, -262136, 65536, 1, -327674, 65536, 1, -327675, 65536, 1, -327676, 0, 3, -393212, 0, 3, -458748, 131072, 3, -458747, 65536, 3, -458746, 65536, 3, -458745, 65536, 3, -458744, 65536, 3, -458743, 65536, 3, -458742, 65536, 3, -458741, 65536, 3, -393205, 65536, 1, -327669, 65536, 1, -393206, 65536, 1, -393207, 65536, 1, -393208, 65536, 1, -393209, 65536, 1, -393210, 65536, 1, -393211, 65536, 1)
+
+[node name="PlayerHandler" type="Node2D" parent="GeneralMechanics"]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_e0js0")
+
+[node name="Camera2D" type="Camera2D" parent="GeneralMechanics/PlayerHandler"]
+position = Vector2(948, 60)
+scale = Vector2(210.9, 770.054)
+zoom = Vector2(3, 3)
+limit_smoothed = true
+position_smoothing_enabled = true
+script = ExtResource("6_lb7ar")
+
+[node name="Spawnpoint" type="Node2D" parent="GeneralMechanics/PlayerHandler"]
+position = Vector2(1088, 580)
+scale = Vector2(0.25, 0.25)
+
+[node name="Timer" type="Timer" parent="GeneralMechanics/PlayerHandler"]
+wait_time = 4.391
+one_shot = true
+script = SubResource("GDScript_bcej1")
+
+[node name="Lever1" parent="." node_paths=PackedStringArray("door") instance=ExtResource("5_uio03")]
+position = Vector2(272, 244)
+scale = Vector2(0.5, 0.5)
+door = NodePath("../Door1")
+
+[node name="Lever2" parent="." node_paths=PackedStringArray("door") instance=ExtResource("5_uio03")]
+position = Vector2(367, 145)
+scale = Vector2(0.5, 0.5)
+door = NodePath("../Door2")
+
+[node name="Door1" parent="." instance=ExtResource("5_t4o1x")]
+position = Vector2(198, 145)
+scale = Vector2(0.5, 0.5)
+
+[node name="Door2" parent="." instance=ExtResource("5_t4o1x")]
+position = Vector2(436, 113)
+scale = Vector2(0.5, 0.5)
+
+[node name="Enemy1" parent="." node_paths=PackedStringArray("patrolPoints") instance=ExtResource("6_kue8q")]
+position = Vector2(355, -190)
+patrolPoints = [NodePath("../EnemyPatrols1/Marker2D"), NodePath("../EnemyPatrols1/Marker2D2"), NodePath("../EnemyPatrols1/Marker2D3"), NodePath("../EnemyPatrols1/Marker2D4")]
+
+[node name="EnemyPatrols1" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="EnemyPatrols1"]
+position = Vector2(351, -193)
+
+[node name="Marker2D2" type="Marker2D" parent="EnemyPatrols1"]
+position = Vector2(160, -193)
+
+[node name="Marker2D3" type="Marker2D" parent="EnemyPatrols1"]
+position = Vector2(160, -96)
+
+[node name="Marker2D4" type="Marker2D" parent="EnemyPatrols1"]
+position = Vector2(352, -96)
+
+[node name="TestCollectable" parent="." instance=ExtResource("12_74gum")]
+position = Vector2(144, 144)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TestCollectable"]
+autoplay = "floating"
+libraries = {
+"": SubResource("AnimationLibrary_dmfwa")
+}
+
+[connection signal="playerEnteredMoonlight" from="GeneralMechanics" to="GeneralMechanics" method="_on_player_entered_moonlight"]
+[connection signal="playerEnteredMoonlight" from="GeneralMechanics" to="GeneralMechanics/PlayerHandler" method="_on_general_mechanics_player_entered_moonlight"]
+[connection signal="playerInteracted" from="GeneralMechanics/PlayerHandler" to="GeneralMechanics/PlayerHandler" method="_on_player_interacted"]
+[connection signal="playerInteracted" from="GeneralMechanics/PlayerHandler" to="Lever1" method="_on_player_handler_player_interacted"]
+[connection signal="timeout" from="GeneralMechanics/PlayerHandler/Timer" to="GeneralMechanics/PlayerHandler" method="_on_timer_timeout"]
+[connection signal="playerInteractedWithLever" from="Lever1" to="Lever1" method="_on_player_interacted_with_lever"]
+[connection signal="playerInteractedWithLever" from="Lever1" to="Door1" method="_on_lever_player_interacted_with_lever"]
+[connection signal="playerInteractedWithLever" from="Lever2" to="Lever2" method="_on_player_interacted_with_lever"]
+[connection signal="playerInteractedWithLever" from="Lever2" to="Door2" method="_on_lever_player_interacted_with_lever"]

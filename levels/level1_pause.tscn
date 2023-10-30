@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b2t17ehe0qyri"]
+
+[node name="Level1_Pause" type="Node2D"]
+process_mode = 1

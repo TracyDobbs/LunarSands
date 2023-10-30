@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dw2ps04ckfuwm"]
+
+[ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_axn45"]
+[ext_resource type="Script" path="res://scripts/EnemyRayCast2D.gd" id="2_hsypi"]
+[ext_resource type="Texture2D" uid="uid://dy610c1otse6s" path="res://sprites/Wolf_Mum.png" id="2_ri1ew"]
+[ext_resource type="PackedScene" uid="uid://jkclu8qami1f" path="res://scenes/npcs/ai/pathfinding.tscn" id="4_mndmc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mli4"]
+size = Vector2(25, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ohued"]
+radius = 15.0885
+
+[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("path", "killArea")]
+light_mask = 2
+visibility_layer = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_axn45")
+path = NodePath("pathfinding")
+killArea = NodePath("KillArea")
+
+[node name="EnemySprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_ri1ew")
+
+[node name="SightRange" type="RayCast2D" parent="." node_paths=PackedStringArray("path")]
+target_position = Vector2(50, 0)
+script = ExtResource("2_hsypi")
+path = NodePath("../pathfinding")
+
+[node name="pathfinding" parent="." instance=ExtResource("4_mndmc")]
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 3
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_8mli4")
+
+[node name="KillArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillArea"]
+scale = Vector2(-1.1948, -1.1948)
+shape = SubResource("CircleShape2D_ohued")
+
+[connection signal="area_entered" from="KillArea" to="." method="_on_kill_area_area_entered"]
+[connection signal="body_entered" from="KillArea" to="." method="_on_kill_area_body_entered"]

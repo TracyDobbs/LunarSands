@@ -1,0 +1,639 @@
+[gd_scene load_steps=21 format=3 uid="uid://d4kxcwo8n8vqh"]
+
+[ext_resource type="Texture2D" uid="uid://2gyjual266y" path="res://sprites/moon_3.jpg" id="1_ku4wx"]
+[ext_resource type="Script" path="res://scripts/IntroSceneComplete.gd" id="1_ymwei"]
+[ext_resource type="Texture2D" uid="uid://cvyh2chtwotkm" path="res://sprites/oasis_village-pixelicious.png" id="2_pol5q"]
+[ext_resource type="Texture2D" uid="uid://be2l5bhlu2nju" path="res://sprites/Solid_black.png" id="3_c235l"]
+[ext_resource type="AudioStream" uid="uid://dpokfcccd5ljp" path="res://sounds/voice-of-desert-medieval-cinematic-history-trailer-146677.mp3" id="4_8ap3j"]
+[ext_resource type="Texture2D" uid="uid://dekenunrln1mf" path="res://sprites/intro_text001.png" id="5_ifbrf"]
+[ext_resource type="Texture2D" uid="uid://cs18eyvqiq5lg" path="res://sprites/intro_text002.png" id="6_u7f4e"]
+[ext_resource type="Texture2D" uid="uid://cyilux8n7cx4a" path="res://sprites/intro_text003.png" id="7_76fkn"]
+[ext_resource type="Texture2D" uid="uid://b4fcrv0n34jcr" path="res://sprites/intro_text004.png" id="8_rc4jb"]
+[ext_resource type="Texture2D" uid="uid://3mkbpa7p8abd" path="res://sprites/intro_text_werewolf.png" id="9_dtjty"]
+[ext_resource type="Texture2D" uid="uid://d2imqlctged0q" path="res://sprites/intro_text005.png" id="10_0mpwp"]
+[ext_resource type="Texture2D" uid="uid://bcogwkfwunanr" path="res://sprites/intro_text007.png" id="11_f2d7o"]
+[ext_resource type="Texture2D" uid="uid://cy6hdrph8eth6" path="res://sprites/intro_text008.png" id="12_mur8h"]
+[ext_resource type="Texture2D" uid="uid://h2v41w6j3q10" path="res://sprites/intro_text009.png" id="13_255bb"]
+[ext_resource type="Texture2D" uid="uid://cdmok15jrcsn8" path="res://sprites/intro_text010.png" id="14_x0put"]
+[ext_resource type="Texture2D" uid="uid://c2jdfeyb5y065" path="res://sprites/intro_text011_title.png" id="15_mdpsh"]
+
+[sub_resource type="Animation" id="Animation_j2fau"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../black:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-200, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../text001:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../text002:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../text003:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../text004:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../oasis_orange:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../moon_blue:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 297)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../moon_blue:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.755, 1.755)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../text005:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../text006_werewolves:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../text006_werewolves:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0872665]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../text007:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../text008:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../text009:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../text010:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../../moon_blue:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../text011:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../text011:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../text011:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -71.4286)]
+}
+
+[sub_resource type="Animation" id="Animation_pw5fd"]
+resource_name = "camera_pan"
+
+[sub_resource type="Animation" id="Animation_tdqpo"]
+resource_name = "intro_animation"
+length = 75.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../black:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.6, 2.6, 17.3, 19.1, 24.9, 25.6, 57.8, 59.3, 64.9, 66),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 19.1, 21.3, 21.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-200, 0), Vector2(290, 0), Vector2(290, 0), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../text001:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1.3, 7.40169, 8.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../AudioStreamPlayer2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_8ap3j")
+}],
+"times": PackedFloat32Array(-3.1)
+}
+tracks/3/use_blend = true
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../text002:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(8.2, 8.9, 13.5175, 14.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../text003:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(14.3, 15, 20.7, 21.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../text004:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(23.5, 24.2, 27.6298, 28.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../oasis_orange:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 21.4, 21.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../moon_blue:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(24.6, 53.2, 59.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 297), Vector2(0, 16.6634), Vector2(0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../moon_blue:scale")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(24.6, 53.2, 59.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.755, 1.755), Vector2(1.06596, 1.06596), Vector2(1.025, 1.025)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../text005:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(28.6, 29.4, 36.8, 37.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../text006_werewolves:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(29.8, 32.4, 36.7993, 37.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../text006_werewolves:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(29.9, 32.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.0872665, -0.0032321]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../text007:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(37.8, 38.7, 46.2469, 47.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../text008:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(47.4, 48.4, 53.8605, 54.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../text009:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(54.8, 55.6, 59.4, 60.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../text010:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(60.2, 61.3, 63.7, 64.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../../moon_blue:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(24, 60.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../text011:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(64.6, 64.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../text011:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(65.5, 66.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../text011:position")
+tracks/20/interp = 2
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(65.5, 67.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -71.4286), Vector2(-5, -144.286)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n5wxm"]
+_data = {
+"RESET": SubResource("Animation_j2fau"),
+"camera_pan": SubResource("Animation_pw5fd"),
+"intro_animation": SubResource("Animation_tdqpo")
+}
+
+[node name="IntroScene" type="Node2D"]
+script = ExtResource("1_ymwei")
+metadata/_edit_horizontal_guides_ = []
+
+[node name="moon_blue" type="Sprite2D" parent="."]
+position = Vector2(0, 297)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("1_ku4wx")
+
+[node name="oasis_orange" type="Sprite2D" parent="."]
+position = Vector2(61, 0)
+scale = Vector2(3.72603, 3.72603)
+texture = ExtResource("2_pol5q")
+
+[node name="black" type="Sprite2D" parent="."]
+position = Vector2(-51, 21)
+scale = Vector2(1.905, 1.035)
+texture = ExtResource("3_c235l")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CameraControl/Camera2D")
+autoplay = "intro_animation"
+libraries = {
+"": SubResource("AnimationLibrary_n5wxm")
+}
+
+[node name="CameraControl" type="Node2D" parent="."]
+position = Vector2(-200, 0)
+scale = Vector2(1.4, 1.4)
+
+[node name="Camera2D" type="Camera2D" parent="CameraControl"]
+zoom = Vector2(0.8, 0.8)
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+
+[node name="text001" type="Sprite2D" parent="CameraControl"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 126)
+scale = Vector2(0.66092, 0.66092)
+texture = ExtResource("5_ifbrf")
+
+[node name="text002" type="Sprite2D" parent="CameraControl"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 126)
+scale = Vector2(0.66092, 0.66092)
+texture = ExtResource("6_u7f4e")
+
+[node name="text003" type="Sprite2D" parent="CameraControl"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 126)
+scale = Vector2(0.66092, 0.66092)
+texture = ExtResource("7_76fkn")
+
+[node name="text004" type="Sprite2D" parent="CameraControl"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 188.571)
+scale = Vector2(0.66092, 0.66092)
+texture = ExtResource("8_rc4jb")
+
+[node name="text006_werewolves" type="Sprite2D" parent="CameraControl"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-155, 248.571)
+rotation = -0.0872665
+scale = Vector2(0.734811, 0.734811)
+texture = ExtResource("9_dtjty")
+
+[node name="text005" type="Sprite2D" parent="CameraControl"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 137.857)
+scale = Vector2(0.66092, 0.66092)
+texture = ExtResource("10_0mpwp")
+
+[node name="text007" type="Sprite2D" parent="CameraControl"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 137.857)
+scale = Vector2(0.66092, 0.66092)
+texture = ExtResource("11_f2d7o")
+
+[node name="text008" type="Sprite2D" parent="CameraControl"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 137.857)
+scale = Vector2(0.66092, 0.66092)
+texture = ExtResource("12_mur8h")
+
+[node name="text009" type="Sprite2D" parent="CameraControl"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 137.857)
+scale = Vector2(0.66092, 0.66092)
+texture = ExtResource("13_255bb")
+
+[node name="text010" type="Sprite2D" parent="CameraControl"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 137.857)
+scale = Vector2(0.66092, 0.66092)
+texture = ExtResource("14_x0put")
+
+[node name="text011" type="Sprite2D" parent="CameraControl"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -71.4286)
+scale = Vector2(0.66092, 0.66092)
+texture = ExtResource("15_mdpsh")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

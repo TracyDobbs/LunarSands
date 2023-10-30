@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://jkclu8qami1f"]
+
+[ext_resource type="Script" path="res://scripts/EnemyPathfinding.gd" id="1_2fad0"]
+
+[node name="pathfinding" type="Node2D"]
+script = ExtResource("1_2fad0")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 10.0
+debug_enabled = true
+
+[node name="ReactionTime" type="Timer" parent="."]
+wait_time = 0.085
+autostart = true
+
+[connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]
+[connection signal="timeout" from="ReactionTime" to="." method="_on_reaction_time_timeout"]

@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://bnagpf3scbjxm"]
+
+[ext_resource type="Script" path="res://ui/pause_menu.gd" id="1_dm6gp"]
+[ext_resource type="FontFile" uid="uid://co0b6w84fpy8g" path="res://ui/OldEnglishGothicPixelRegular-gx1jp.otf" id="2_a5t6c"]
+[ext_resource type="FontFile" uid="uid://c0gx7lu7m5dko" path="res://ui/OldEnglishGothicPixelRegular-ow2Bo.ttf" id="3_tqj23"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gb7g5"]
+font = ExtResource("2_a5t6c")
+font_size = 14
+font_color = Color(0.45098, 0.388235, 0.0666667, 1)
+outline_size = 2
+outline_color = Color(0.607843, 0.321569, 0.0117647, 0.223529)
+
+[sub_resource type="Theme" id="Theme_m7y5n"]
+default_font = ExtResource("3_tqj23")
+
+[sub_resource type="Theme" id="Theme_32foh"]
+default_font = ExtResource("3_tqj23")
+
+[node name="Pause_menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 4.0
+offset_right = -1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dm6gp")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -78.0
+offset_right = 66.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "   -PAUSE MENU- "
+label_settings = SubResource("LabelSettings_gb7g5")
+
+[node name="resume" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_m7y5n")
+theme_override_colors/font_color = Color(0.45098, 0.388235, 0.0666667, 1)
+button_mask = 5
+text = "RESUME GAME"
+
+[node name="quit" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_32foh")
+theme_override_colors/font_color = Color(0.45098, 0.388235, 0.0666667, 1)
+button_mask = 5
+text = "QUIT GAME"

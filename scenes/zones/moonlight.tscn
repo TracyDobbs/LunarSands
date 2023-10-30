@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlhoiy5ix8xye"]
+
+[ext_resource type="Texture2D" uid="uid://bw87i4sje2ain" path="res://interactables/placeholders/MoonlightPlaceholder.png" id="2_fpu58"]
+
+[sub_resource type="GDScript" id="GDScript_mseqg"]
+script/source = "extends StaticBody2D
+
+# Signals
+signal playerEnteredMoonlight
+
+# Called when a body enters the moonlight area
+func _on_area_body_entered(body):
+	print(\"Body entered area...\")
+	playerEnteredMoonlight.emit()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ncdqq"]
+size = Vector2(64, 64)
+
+[node name="Moonlight" type="StaticBody2D"]
+script = SubResource("GDScript_mseqg")
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="Collider" type="CollisionShape2D" parent="Area"]
+shape = SubResource("RectangleShape2D_ncdqq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fpu58")
+
+[connection signal="body_entered" from="Area" to="." method="_on_area_body_entered"]

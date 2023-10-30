@@ -1,0 +1,199 @@
+[gd_scene load_steps=10 format=3 uid="uid://rmls7jrp3gke"]
+
+[ext_resource type="Script" path="res://scripts/PlayerPositionHandler.gd" id="1_1vqq2"]
+[ext_resource type="Script" path="res://scripts/PlayerStateHandler.gd" id="1_e0js0"]
+[ext_resource type="PackedScene" uid="uid://dlhoiy5ix8xye" path="res://scenes/zones/moonlight.tscn" id="2_vqimq"]
+[ext_resource type="Texture2D" uid="uid://dhdnqgfpd5byj" path="res://tiles/DungeonTileset_v2.png" id="3_dqd28"]
+[ext_resource type="PackedScene" uid="uid://dihmfho2fueh" path="res://scenes/interactables/door.tscn" id="5_t4o1x"]
+[ext_resource type="PackedScene" uid="uid://f7yllpirwvd" path="res://scenes/interactables/lever.tscn" id="5_uio03"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_46nkd"]
+texture = ExtResource("3_dqd28")
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.875, 8, 3, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.375, -2.625, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/custom_data_0 = true
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(3, -8, 8, -8, 8, 8, 2.875, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -8, -1.875, 8, -8, 8, -8, -8)
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0/custom_data_0 = true
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.5, -8, 8, -8, 8, -2.5)
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3, -8, -3.25)
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.375, -8, -8, -2.625, -8, -8)
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0/custom_data_0 = true
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 3.25, 3.25, 8, 8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.75, 8, 3, 8, 8, -8, 8)
+5:3/0 = 0
+5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:3/0/physics_layer_0/angular_velocity = 0.0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3, -3.5, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(3, -8, 8, -8, 8, 8, 2.875, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:4/0/physics_layer_0/angular_velocity = 0.0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0 = 0
+5:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:4/0/physics_layer_0/angular_velocity = 0.0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -8, -1.875, 8, -8, 8, -8, -8)
+0:5/0 = 0
+0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:5/0/physics_layer_0/angular_velocity = 0.0
+1:5/0 = 0
+1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:5/0/physics_layer_0/angular_velocity = 0.0
+2:5/0 = 0
+2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:5/0/physics_layer_0/angular_velocity = 0.0
+3:5/0 = 0
+3:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:5/0/physics_layer_0/angular_velocity = 0.0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.25, -8, 8, -8, 8, -3.25)
+4:5/0 = 0
+4:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:5/0/physics_layer_0/angular_velocity = 0.0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3, -8, -3.25)
+5:5/0 = 0
+5:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:5/0/physics_layer_0/angular_velocity = 0.0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3, -8, -8, -3.125, -8, -8)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 2.625, 2.25, 8, 8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_mvh0l"]
+physics_layer_0/collision_layer = 1
+custom_data_layer_0/name = "moonlight"
+custom_data_layer_0/type = 1
+sources/2 = SubResource("TileSetAtlasSource_46nkd")
+
+[sub_resource type="GDScript" id="GDScript_bcej1"]
+script/source = "extends Timer
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="TestRoom" type="Node2D"]
+script = ExtResource("1_1vqq2")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_mvh0l")
+format = 2
+layer_0/name = "1"
+layer_0/tile_data = PackedInt32Array(65537, 131074, 4, 65538, 65538, 5, 65539, 65538, 5, 65540, 65538, 5, 65541, 65538, 5, 65542, 65538, 5, 65543, 65538, 5, 65544, 65538, 5, 65545, 65538, 5, 65546, 65538, 5, 65547, 65538, 5, 65548, 65538, 5, 65549, 65538, 5, 131085, 65538, 1, 196621, 65538, 1, 262157, 65538, 1, 327693, 262146, 2, 393229, 262146, 0, 458765, 262146, 2, 458764, 262146, 1, 458763, 262146, 0, 458762, 65538, 1, 458761, 65538, 1, 458760, 65538, 1, 458759, 65538, 1, 458758, 65538, 1, 458757, 65538, 1, 458756, 65538, 1, 458755, 65538, 1, 458754, 65538, 1, 458753, 2, 5, 393217, 2, 5, 393218, 196610, 5, 393219, 262146, 5, 393220, 262146, 5, 393221, 262146, 5, 393222, 327682, 5, 393223, 65538, 1, 393224, 65538, 1, 393225, 65538, 1, 393226, 65538, 1, 393227, 262146, 2, 393228, 262146, 2, 327692, 262146, 2, 327691, 262146, 1, 327690, 65538, 1, 327689, 65538, 1, 327688, 65538, 1, 327687, 65538, 1, 327686, 327682, 4, 327685, 65538, 1, 327684, 65538, 1, 327683, 262146, 4, 327682, 196610, 4, 327681, 2, 5, 262145, 2, 5, 262146, 196610, 4, 262147, 65538, 1, 262148, 65538, 1, 262149, 65538, 1, 262150, 65538, 1, 262151, 65538, 1, 262152, 65538, 1, 262153, 65538, 1, 262154, 65538, 1, 262155, 65538, 1, 262156, 65538, 1, 196620, 65538, 1, 196619, 65538, 1, 196618, 65538, 1, 196617, 65538, 1, 196611, 262146, 4, 196610, 196610, 4, 196612, 65538, 1, 196613, 65538, 1, 196614, 327682, 4, 196615, 65538, 1, 196616, 65538, 1, 131082, 65538, 1, 131083, 65538, 1, 131084, 65538, 1, 131081, 65538, 1, 131080, 65538, 1, 131079, 65538, 1, 131078, 327682, 3, 131077, 262146, 3, 131076, 262146, 3, 131075, 262146, 3, 131074, 196610, 3, 131073, 2, 5, 196609, 2, 5, 1, 65538, 0, 2, 65538, 0, 3, 65538, 0, 4, 65538, 0, 5, 65538, 0, 6, 65538, 0, 7, 65538, 0, 8, 65538, 0, 9, 65538, 0, 10, 65538, 0, 11, 65538, 0, 12, 65538, 0, 13, 65538, 0, 65550, 131074, 1, 131086, 131074, 1, 196622, 131074, 1, 262158, 131074, 1, 327694, 131074, 1, 393230, 131074, 1, 458766, 131074, 1, 524301, 65538, 2, 524300, 65538, 2, 524299, 65538, 2, 524298, 65538, 2, 524297, 65538, 2, 524296, 65538, 2, 524295, 65538, 2, 524294, 65538, 2, 524293, 65538, 2, 524292, 65538, 2, 524291, 65538, 2, 524290, 65538, 2, 524289, 65538, 2, 458752, 2, 1, 393216, 2, 1, 327680, 2, 1, 262144, 2, 1, 196608, 2, 1, 131072, 2, 1, 65536, 2, 1, 0, 2, 0, 14, 131074, 0, 524302, 131074, 2, 524288, 2, 2)
+
+[node name="Lever" parent="." instance=ExtResource("5_uio03")]
+position = Vector2(120, 103)
+scale = Vector2(0.25, 0.25)
+
+[node name="Moonlight" parent="." instance=ExtResource("2_vqimq")]
+position = Vector2(413, 140)
+
+[node name="PlayerHandler" type="Node2D" parent="."]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_e0js0")
+
+[node name="Camera2D" type="Camera2D" parent="PlayerHandler"]
+position = Vector2(484, 284)
+zoom = Vector2(4, 4)
+
+[node name="Spawnpoint" type="Node2D" parent="PlayerHandler"]
+position = Vector2(183, 72)
+scale = Vector2(0.25, 0.25)
+
+[node name="Timer" type="Timer" parent="PlayerHandler"]
+wait_time = 10.0
+one_shot = true
+script = SubResource("GDScript_bcej1")
+
+[node name="Door" parent="." instance=ExtResource("5_t4o1x")]
+position = Vector2(99, 73)
+scale = Vector2(0.25, 0.25)
+
+[connection signal="playerInRangeOfLever" from="Lever" to="Lever" method="_on_player_in_range_of_lever"]
+[connection signal="playerInRangeOfLever" from="Lever" to="PlayerHandler" method="_on_lever_player_in_range_of_lever"]
+[connection signal="playerInteractedWithLever" from="Lever" to="Lever" method="_on_player_interacted_with_lever"]
+[connection signal="playerInteractedWithLever" from="Lever" to="Door" method="_on_lever_player_interacted_with_lever"]
+[connection signal="playerEnteredMoonlight" from="Moonlight" to="Moonlight" method="_on_player_entered_moonlight"]
+[connection signal="playerEnteredMoonlight" from="Moonlight" to="PlayerHandler" method="_on_moonlight_player_entered_moonlight"]
+[connection signal="playerInteracted" from="PlayerHandler" to="Lever" method="_on_player_handler_player_interacted"]
+[connection signal="playerInteracted" from="PlayerHandler" to="PlayerHandler" method="_on_player_interacted"]
+[connection signal="timeout" from="PlayerHandler/Timer" to="PlayerHandler" method="_on_timer_timeout"]

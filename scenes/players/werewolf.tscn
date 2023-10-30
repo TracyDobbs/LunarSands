@@ -1,0 +1,148 @@
+[gd_scene load_steps=14 format=3 uid="uid://wn2i2esv1f3i"]
+
+[ext_resource type="Script" path="res://scripts/Werewolf.gd" id="1_845eo"]
+[ext_resource type="Texture2D" uid="uid://ckqvmq85ixvd3" path="res://sprites/placeholders/mc_werewolf/Wolf_South/MC_Wolf_South1.png" id="2_x0q8k"]
+[ext_resource type="Texture2D" uid="uid://csfq24nu2d3ux" path="res://sprites/placeholders/mc_werewolf/Wolf_South/MC_Wolf_South2.png" id="3_w2ee1"]
+[ext_resource type="Texture2D" uid="uid://b6v4u5wefpltn" path="res://sprites/placeholders/mc_werewolf/Wolf_South/MC_Wolf_South3.png" id="4_hf61j"]
+[ext_resource type="Texture2D" uid="uid://cl8l0otgptwqi" path="res://sprites/placeholders/mc_werewolf/Wolf_South/MC_Wolf_South4.png" id="5_ydxh7"]
+[ext_resource type="Texture2D" uid="uid://dpv147y7v6cdh" path="res://sprites/placeholders/mc_werewolf/Wolf_South/MC_Wolf_South5.png" id="6_domk4"]
+[ext_resource type="Texture2D" uid="uid://c45qeebv2fo4j" path="res://sprites/placeholders/mc_werewolf/Wolf_South/MC_Wolf_South6.png" id="7_rumcb"]
+[ext_resource type="Texture2D" uid="uid://sfvbkheyspm1" path="res://sprites/placeholders/mc_werewolf/Wolf_Idle/MC_Wolf1.png" id="8_xg1n0"]
+[ext_resource type="Texture2D" uid="uid://u84dpti88xci" path="res://sprites/placeholders/mc_werewolf/Wolf_Idle/MC_Wolf2.png" id="9_6garv"]
+[ext_resource type="Texture2D" uid="uid://txy5o8rsqgn" path="res://sprites/placeholders/mc_werewolf/Wolf_Idle/MC_Wolf3.png" id="10_0ewja"]
+[ext_resource type="Texture2D" uid="uid://dusqcwx6ou26b" path="res://sprites/placeholders/mc_werewolf/Wolf_Idle/MC_Wolf4.png" id="11_vbxiq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8en3"]
+size = Vector2(19, 29)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgxfi"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x0q8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w2ee1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hf61j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ydxh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_domk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rumcb")
+}],
+"loop": true,
+"name": &"down",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xg1n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6garv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0ewja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vbxiq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x0q8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w2ee1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hf61j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ydxh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_domk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rumcb")
+}],
+"loop": true,
+"name": &"left",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x0q8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w2ee1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hf61j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ydxh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_domk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rumcb")
+}],
+"loop": true,
+"name": &"right",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x0q8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w2ee1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hf61j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ydxh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_domk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rumcb")
+}],
+"loop": true,
+"name": &"up",
+"speed": 15.0
+}]
+
+[node name="Werewolf" type="CharacterBody2D" node_paths=PackedStringArray("sprite") groups=["Player"]]
+light_mask = 2
+visibility_layer = 3
+position = Vector2(281, 186)
+script = ExtResource("1_845eo")
+sprite = NodePath("AnimatedSprite2D")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_n8en3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bgxfi")
+animation = &"idle"

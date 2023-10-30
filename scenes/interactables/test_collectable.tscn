@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc6tfky3m4rdl"]
+
+[ext_resource type="Texture2D" uid="uid://cces1wt72okxp" path="res://sprites/Moonlight_Orchid_16bit.png" id="1_1gee6"]
+[ext_resource type="Script" path="res://scenes/interactables/Collectable.gd" id="1_lvide"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_act0j"]
+size = Vector2(16, 16)
+
+[node name="TestCollectable" type="StaticBody2D" groups=["Collectable"]]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_lvide")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1gee6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_act0j")

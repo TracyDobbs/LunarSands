@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://de2wwqhvy1if0"]
+
+[ext_resource type="Texture2D" uid="uid://c4oa02g8gy10p" path="res://sprites/placeholders/AstronomerPlaceholder.png" id="1_1fg3e"]
+[ext_resource type="Script" path="res://scripts/Astronomer.gd" id="1_pdj4m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gj5wx"]
+size = Vector2(56, 56)
+
+[node name="Astronomer" type="CharacterBody2D" groups=["Player"]]
+position = Vector2(503, 284)
+scale = Vector2(2, 2)
+script = ExtResource("1_pdj4m")
+speed = 125
+
+[node name="AstronomerSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_1fg3e")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 3
+shape = SubResource("RectangleShape2D_gj5wx")
