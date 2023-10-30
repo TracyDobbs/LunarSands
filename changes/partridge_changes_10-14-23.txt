@@ -1,0 +1,12 @@
+altered "astronomer.tscn"
+	childed an Area2D and a CollisionShape2D
+		note: these act a trigger for when the player moves into contact with a collectable object
+		
+altered "Astronomer.gd"
+	added function "func _on_area_2d_body_entered(body)"
+		note: this detects collision with Area2D and decides if the colliding body should be stored in the inventory
+		
+altered "PlayerStateHandler.gd"
+	new variable of type Array containing StaticBody2Ds called "inventory"
+	added "func store(body)"
+		note: this appends the provided StaticBody2D to the array "inventory"

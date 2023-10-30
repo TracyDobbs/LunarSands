@@ -1,0 +1,19 @@
+modified Lever.gd by adding a new function "func get_player_in_range" to return the state of the boolean variable "playerInRange"
+
+instantiated scene "interact_prompt" as a child of "lever"
+
+"interact_prompt" should be childed to all interactable nodes in the future
+
+commented out lines 23 and 28
+
+new scene "ui"
+
+instantiated "ui" as a child of "test_room"
+
+modified Lever.gd by adding a new funcion "func dialogue_trigger" to trigger the dialogue component in "ui"
+
+modified Lever.gd by adding function call "dialogue_trigger()" to " func _on_player_interacted_with_lever" after match statement
+
+altered the input map to include left mouse click in the "interact" action
+
+added a new action "progress" to input map using space click, however, this is yet to be implemented

@@ -1,0 +1,19 @@
+overhauled the ai's pathing, it now uses a NavigationAgent2D to follow Vector2 coords.
+	note: this is what the pathfinding scene is for
+
+added the astronomer and werewolf nodes to a "Player" group, this makes referencing them much easier
+
+changed lines 23 and 30 in "Lever.gd" to reference the current player node using its group
+
+added two variables too "EnemyRayCast2D.gd": "path" and "navAgent"
+	note: navAgent might not do anything but I'm tired and don't feel like going and finding out at the moment so it's going to stay there for a bit
+
+added line 18 in "EnemyRayCast2D.gd" to change the direction the raycast was facing based on the direction the ai is moving
+
+added line 23 in "EnemyRayCast2D.gd" to set the target to the player
+
+gave the enemy node an Area2D that detects if the player is close to the ai, this is the kill zone
+
+added four variables too "Enemy.gd": "path", "killArea", "patrolPoints", and "tempPoints"
+	note: "path" and "killArea" simply store a reference to their rotssssspective nodes, and the other two are Arrays that keep track of the patrol points.
+		double note: "patrolPoints", is never altered as it is used for "tempPoints" to reference

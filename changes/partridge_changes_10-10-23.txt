@@ -1,0 +1,23 @@
+altered "UI.gd"
+	two new variables that store references to the dialogue component and the dialogue label
+	changed calls to find the dialogue node in the tree to use the new dialogue component variable
+	new function "dialogue_text()" sets the text in the dialogue box
+	
+altered "Lever.gd"
+	"dialogue_trigger()" now calls "dialogue_text()" on the UI
+	added variable storing reference to the UI
+	changed all "get_parent().find_child("UI")" calls to use the "ui" variable
+	
+altered "Enemy.gd"
+	new function "dialogue_trigger" added
+	added variable storing reference to the UI
+	changed all "get_parent().find_child("UI")" calls to use the "ui" variable
+	function "_on_kill_area_body_entered(body)" calls "dialogue_trigger()"
+		note: there is a bug where this dialogue event triggers on scene reload regardless
+		
+altered "EnemyRayCast2D.gd"
+	in the collision check in physics process, the raycast will wait for 5 seconds after detecting the player before defaulting to its patrol again
+	
+altered both player scripts (astronomer and werewolf)
+	new function "die" added
+		resets level when called
