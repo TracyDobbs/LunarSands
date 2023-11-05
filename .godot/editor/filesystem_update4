@@ -4,3 +4,4 @@ res://scenes/levels/IntroLevel.tscn
 res://scenes/levels/TestLevel01.tscn
 res://interactables/level_change_zone.tscn
 res://scenes/levels/intro_scene.tscn
+res://scenes/ui/ui.tscn

@@ -1,8 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://ce7upepng8cjm"]
+[gd_scene load_steps=6 format=3 uid="uid://ce7upepng8cjm"]
 
 [ext_resource type="Script" path="res://scripts/UI.gd" id="1_cjyqj"]
+[ext_resource type="FontFile" uid="uid://w85pfhfbabxo" path="res://fonts/pixeloid-font/PixeloidSans-mLxMm.ttf" id="2_q2kc6"]
+[ext_resource type="FontFile" uid="uid://dh1lom44p022w" path="res://fonts/OldEnglishGothicPixelRegular-ow2Bo.ttf" id="2_xxivw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i4y00"]
+font = ExtResource("2_q2kc6")
 
 [sub_resource type="LabelSettings" id="LabelSettings_b6743"]
+font = ExtResource("2_xxivw")
 font_size = 200
 font_color = Color(1, 0, 0, 1)
 outline_size = 4
@@ -59,11 +65,12 @@ theme_override_constants/margin_bottom = 4
 layout_mode = 2
 size_flags_vertical = 0
 text = "This is dialogue mode!"
+label_settings = SubResource("LabelSettings_i4y00")
 
 [node name="DeathScreen" type="Label" parent="Control/MarginContainer"]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
-text = "you died"
+text = "You died"
 label_settings = SubResource("LabelSettings_b6743")
 uppercase = true
