@@ -1,7 +1,12 @@
-res://scenes/levels/TestLevel01.tscn
-res://tiles/resources/DungeonTileSet_v2.6.tres
 res://scenes/interactables/test_collectable.tscn
+res://tiles/resources/DungeonTileSet_v2.6.tres
 res://scenes/levels/IntroLevel.tscn
+res://scenes/levels/TestLevel01.tscn
 res://interactables/level_change_zone.tscn
 res://scenes/levels/intro_scene.tscn
 res://scenes/ui/ui.tscn
+res://scenes/ui/interact_prompt.tscn
+res://scenes/interactables/goddess.tscn
+res://scenes/interactables/lever.tscn
+res://scenes/interactables/Goddess.gd
+res://scripts/InteractPrompt.gd

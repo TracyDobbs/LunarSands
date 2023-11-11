@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b830frqo1icn2"]
+[gd_scene load_steps=9 format=3 uid="uid://b830frqo1icn2"]
 
 [ext_resource type="TileSet" uid="uid://b86rglu32y6vy" path="res://tiles/resources/DungeonTileSet_v2.6.tres" id="2_clovk"]
 [ext_resource type="Script" path="res://scripts/PlayerStateHandler.gd" id="4_6hvdy"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/FollowPlayer.gd" id="5_keg3m"]
 [ext_resource type="PackedScene" uid="uid://ce7upepng8cjm" path="res://scenes/ui/ui.tscn" id="6_a6oos"]
 [ext_resource type="PackedScene" uid="uid://cc6tfky3m4rdl" path="res://scenes/interactables/test_collectable.tscn" id="6_kukcn"]
+[ext_resource type="PackedScene" uid="uid://b55r8ayoiff3h" path="res://scenes/interactables/goddess.tscn" id="7_ewgm8"]
 
 [sub_resource type="GDScript" id="GDScript_31ohl"]
 script/source = "extends Timer
@@ -54,7 +55,10 @@ position = Vector2(-263, -118)
 levelName = "TestLevel01"
 
 [node name="TestCollectable" parent="." instance=ExtResource("6_kukcn")]
-position = Vector2(-32, -146)
+position = Vector2(-144, -144)
+
+[node name="Goddess" parent="." instance=ExtResource("7_ewgm8")]
+position = Vector2(-16, -144)
 
 [connection signal="playerInteracted" from="PlayerHandler" to="PlayerHandler" method="_on_player_interacted"]
 [connection signal="timeout" from="PlayerHandler/Timer" to="PlayerHandler" method="_on_timer_timeout"]
