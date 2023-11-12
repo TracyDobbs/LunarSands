@@ -1,3 +1,4 @@
+Node
 CollisionShape2D
 Area2D
 AnimatedSprite2D
@@ -8,7 +9,6 @@ AnimationPlayer
 AudioStreamPlayer
 Label
 Sprite2D
-Node
 Marker2D
 Node2D
 Timer

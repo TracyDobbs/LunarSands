@@ -1,0 +1,6 @@
+Thank you for bringing me a [Items]
+I still require [MissingItem]
+I cannot leave my position.
+You must go get [MissingItem]
+I will not be able to help without the last ingredient.
+And maybe a sacrifice…

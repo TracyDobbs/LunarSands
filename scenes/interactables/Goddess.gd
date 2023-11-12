@@ -33,17 +33,15 @@ func _on_area_2d_body_exited(body):
 		
 	player = null
 	playerInRange = false
+	
+func _input(event):
+	if (player == null):
+		return
+		
+	if (playerInRange == true && Input.is_action_just_pressed("interact") == true):
+		$GoddessDialogueHandler.determine_dialogue_options()
 
 # returns the playerInRange state
-# this allows other objects to see if the player is within range of the lever
+# this allows other objects to see if the player is within range of the NPC
 func get_player_in_range():
 	return playerInRange
-	
-func dialogue_trigger():
-	ui.dialogue_text("Lever interacted with!")
-	ui.dialogue_mode(true)
-	await get_tree().create_timer(1.0).timeout
-	ui.dialogue_mode(false)
-
-
-
