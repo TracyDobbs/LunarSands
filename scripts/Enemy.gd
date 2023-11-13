@@ -17,6 +17,7 @@ var tempPoints = patrolPoints
 var speed = 100;
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+@warning_ignore("unused_parameter")
 func _physics_process(delta):
 	velocity = path.direction * speed
 	move_and_slide()

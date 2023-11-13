@@ -6,7 +6,6 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_i4y00"]
 font = ExtResource("2_q2kc6")
-font_size = 24
 
 [sub_resource type="LabelSettings" id="LabelSettings_b6743"]
 font = ExtResource("2_xxivw")
@@ -65,11 +64,8 @@ theme_override_constants/margin_bottom = 4
 [node name="DialogueLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/Dialogue/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "This is dialogue mode!
-
-"
+text = "This is dialogue mode!"
 label_settings = SubResource("LabelSettings_i4y00")
-autowrap_mode = 1
 
 [node name="DeathScreen" type="Label" parent="Control/MarginContainer"]
 process_mode = 3

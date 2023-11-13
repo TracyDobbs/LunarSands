@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b830frqo1icn2"]
+[gd_scene load_steps=11 format=3 uid="uid://b830frqo1icn2"]
 
 [ext_resource type="TileSet" uid="uid://b86rglu32y6vy" path="res://tiles/resources/DungeonTileSet_v2.6.tres" id="2_clovk"]
 [ext_resource type="Script" path="res://scripts/PlayerStateHandler.gd" id="4_6hvdy"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://scripts/FollowPlayer.gd" id="5_keg3m"]
 [ext_resource type="PackedScene" uid="uid://ce7upepng8cjm" path="res://scenes/ui/ui.tscn" id="6_a6oos"]
 [ext_resource type="PackedScene" uid="uid://cc6tfky3m4rdl" path="res://scenes/interactables/test_collectable.tscn" id="6_kukcn"]
-[ext_resource type="PackedScene" uid="uid://b55r8ayoiff3h" path="res://scenes/interactables/goddess.tscn" id="7_ewgm8"]
+[ext_resource type="PackedScene" uid="uid://k24k6oqklnrf" path="res://trap.tscn" id="7_ccr52"]
 
 [sub_resource type="GDScript" id="GDScript_31ohl"]
 script/source = "extends Timer
@@ -20,6 +20,12 @@ func _ready():
 func _process(delta):
 	pass
 "
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uk5ja"]
+size = Vector2(4, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14258"]
+size = Vector2(66, 3)
 
 [node name="IntroLevel" type="Node2D"]
 
@@ -55,10 +61,31 @@ position = Vector2(-263, -118)
 levelName = "TestLevel01"
 
 [node name="TestCollectable" parent="." instance=ExtResource("6_kukcn")]
-position = Vector2(-144, -144)
+position = Vector2(-32, -146)
 
-[node name="Goddess" parent="." instance=ExtResource("7_ewgm8")]
-position = Vector2(-16, -144)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(159, -96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1.5, 0.5)
+shape = SubResource("RectangleShape2D_uk5ja")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(32, -222)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_14258")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-97, -222)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_14258")
+
+[node name="Area2D" parent="." instance=ExtResource("7_ccr52")]
+position = Vector2(-144, -144)
+scale = Vector2(0.708336, 0.761734)
 
 [connection signal="playerInteracted" from="PlayerHandler" to="PlayerHandler" method="_on_player_interacted"]
 [connection signal="timeout" from="PlayerHandler/Timer" to="PlayerHandler" method="_on_timer_timeout"]
