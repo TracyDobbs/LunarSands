@@ -54,6 +54,18 @@ script = SubResource("GDScript_31ohl")
 position = Vector2(-263, -118)
 levelName = "TestLevel01"
 
+[node name="LevelChangeZone2" parent="." instance=ExtResource("5_g228p")]
+position = Vector2(-117, -248)
+levelName = "TestLevel01"
+
+[node name="LevelChangeZone3" parent="." instance=ExtResource("5_g228p")]
+position = Vector2(12, -248)
+levelName = "TestLevel01"
+
+[node name="LevelChangeZone4" parent="." instance=ExtResource("5_g228p")]
+position = Vector2(156, -118)
+levelName = "TestLevel01"
+
 [node name="TestCollectable" parent="." instance=ExtResource("6_kukcn")]
 position = Vector2(-144, -144)
 

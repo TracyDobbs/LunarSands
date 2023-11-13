@@ -1,11 +1,18 @@
 extends Node
 
+# Game UI
+var ui: CanvasLayer
+
 # Player inventory
 var inventory: Array[String]
 
 # Starting path of all levels
 const FILE_BEGIN = "res://scenes/levels/"
 
+func _process(delta):
+	if (ui == null):
+		ui = get_tree().root.find_child("UI")
+	
 # Changes the level to the level with the provided name
 func change_level(level):		
 		var next_level_path = FILE_BEGIN + level + ".tscn"	

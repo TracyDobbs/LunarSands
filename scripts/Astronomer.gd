@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # Stores reference to the UI
-@onready var ui: CanvasLayer = get_tree().root.find_child("UI")
+var ui: CanvasLayer
 
 # Movement Variables
 var speed: int = 50
@@ -17,6 +17,10 @@ signal playerInteracted
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
+	
+func _process(delta):
+	if (ui == null):
+		ui = get_tree().root.find_child("UI")
 	
 # Called when input is detected and applies forward force to player based on pressed key
 func _handleInput():
@@ -51,6 +55,7 @@ func _physics_process(delta):
 		
 func die():
 	get_tree().reload_current_scene()
+	print(GlobalScript.ui)
 	
 # this is used to check if a collectable is within range of the player
 func _on_area_2d_body_entered(body):
