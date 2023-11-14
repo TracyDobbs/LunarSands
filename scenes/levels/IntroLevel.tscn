@@ -1,12 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://b830frqo1icn2"]
+[gd_scene load_steps=11 format=3 uid="uid://b830frqo1icn2"]
 
 [ext_resource type="TileSet" uid="uid://b86rglu32y6vy" path="res://tiles/resources/DungeonTileSet_v2.6.tres" id="2_clovk"]
 [ext_resource type="Script" path="res://scripts/PlayerStateHandler.gd" id="4_6hvdy"]
 [ext_resource type="PackedScene" uid="uid://dtc11cxmfaqgl" path="res://interactables/level_change_zone.tscn" id="5_g228p"]
 [ext_resource type="Script" path="res://scripts/FollowPlayer.gd" id="5_keg3m"]
 [ext_resource type="PackedScene" uid="uid://ce7upepng8cjm" path="res://scenes/ui/ui.tscn" id="6_a6oos"]
-[ext_resource type="PackedScene" uid="uid://cc6tfky3m4rdl" path="res://scenes/interactables/test_collectable.tscn" id="6_kukcn"]
+[ext_resource type="PackedScene" uid="uid://duu3ntmdbw8bg" path="res://scenes/interactables/moonlight_orchid.tscn" id="7_1jhyv"]
 [ext_resource type="PackedScene" uid="uid://b55r8ayoiff3h" path="res://scenes/interactables/goddess.tscn" id="7_ewgm8"]
+[ext_resource type="PackedScene" uid="uid://xyllpg4dl21k" path="res://scenes/interactables/wolfsbane.tscn" id="8_iptv4"]
+[ext_resource type="PackedScene" uid="uid://dgrcvi6p1jawi" path="res://scenes/interactables/werewolfs_claw.tscn" id="9_jn116"]
 
 [sub_resource type="GDScript" id="GDScript_31ohl"]
 script/source = "extends Timer
@@ -66,11 +68,17 @@ levelName = "TestLevel01"
 position = Vector2(156, -118)
 levelName = "TestLevel01"
 
-[node name="TestCollectable" parent="." instance=ExtResource("6_kukcn")]
-position = Vector2(-144, -144)
-
 [node name="Goddess" parent="." instance=ExtResource("7_ewgm8")]
 position = Vector2(-16, -144)
+
+[node name="MoonlightOrchid" parent="." instance=ExtResource("7_1jhyv")]
+position = Vector2(-124, -136)
+
+[node name="Wolfsbane" parent="." instance=ExtResource("8_iptv4")]
+position = Vector2(-83, -54)
+
+[node name="WerewolfsClaw" parent="." instance=ExtResource("9_jn116")]
+position = Vector2(-106, -89)
 
 [connection signal="playerInteracted" from="PlayerHandler" to="PlayerHandler" method="_on_player_interacted"]
 [connection signal="timeout" from="PlayerHandler/Timer" to="PlayerHandler" method="_on_timer_timeout"]

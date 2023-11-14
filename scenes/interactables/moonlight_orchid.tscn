@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://duu3ntmdbw8bg"]
+
+[ext_resource type="Script" path="res://scenes/interactables/Collectable.gd" id="1_76lcd"]
+[ext_resource type="Texture2D" uid="uid://01havrmutg0p" path="res://sprites/Tilesets/Tileset_01.png" id="1_go8mr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyyto"]
+atlas = ExtResource("1_go8mr")
+region = Rect2(0, 112, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_urccd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyyto")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jq8re"]
+size = Vector2(16, 16.0625)
+
+[node name="MoonlightOrchid" type="StaticBody2D" groups=["Collectable"]]
+script = ExtResource("1_76lcd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_urccd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.3125)
+shape = SubResource("RectangleShape2D_jq8re")

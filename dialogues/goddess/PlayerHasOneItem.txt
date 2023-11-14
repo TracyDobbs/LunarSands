@@ -1,6 +1,2 @@
-Thank you for bringing me [Item]
-Now you still need to bring me a [MissingItems]
-Please bring me the other two ingredients.
-I will continue to wait here.
-It is important that you retrieve a [MissingItems]
-I believe there should be just enough around here…
+Thank you for bringing me
+Now you still need to bring me a

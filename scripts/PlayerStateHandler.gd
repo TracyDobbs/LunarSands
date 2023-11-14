@@ -16,6 +16,9 @@ var timer: Timer
 var tileData: TileData
 var layer: int = 0
 
+# Store reference to UI
+@onready var ui: CanvasLayer = owner.find_child("UI")
+
 # Signals
 signal playerInteracted
 
@@ -28,6 +31,9 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if (ui == null):
+		ui = get_parent().find_child("UI")
+		
 	var tilePlayerPosition: Vector2i = tileMap.local_to_map(get_global_player_position())
 	tileData = tileMap.get_cell_tile_data(layer, tilePlayerPosition)
 		

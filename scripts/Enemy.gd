@@ -27,8 +27,4 @@ func get_patrol_points():
 func _on_kill_area_body_entered(body):
 	if (body.is_in_group("Player")):
 		print("player caught")
-		ui.death_screen_mode(true)
-		get_tree().paused = true
-		await get_tree().create_timer(3).timeout
-		get_tree().paused = false
 		body.die()

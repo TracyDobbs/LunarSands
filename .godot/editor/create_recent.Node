@@ -1,14 +1,14 @@
 AnimatedSprite2D
-Node
 CollisionShape2D
+Sprite2D
+StaticBody2D
+Node
 Area2D
 CharacterBody2D
-StaticBody2D
 TileMap
 AnimationPlayer
 AudioStreamPlayer
 Label
-Sprite2D
 Marker2D
 Node2D
 Timer
