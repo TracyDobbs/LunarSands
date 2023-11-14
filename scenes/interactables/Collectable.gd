@@ -1,12 +1,12 @@
 extends StaticBody2D
 
 # Name of the Object
-@onready var thisObjectsName = to_string().get_slice(":", 0)
+@export var collectableName: String
 
 # Get the current inventory on scene load
 @onready var inventory = GlobalScript.inventory
 
 func _ready():
 	for itemName in inventory:
-		if itemName == thisObjectsName:
+		if itemName == collectableName:
 			queue_free()

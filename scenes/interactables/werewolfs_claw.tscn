@@ -21,8 +21,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jq8re"]
 size = Vector2(16, 16.0625)
 
-[node name="WerewolfsClaw" type="StaticBody2D" groups=["Collectable"]]
+[node name="Werewolf\'s Claw" type="StaticBody2D" groups=["Collectable"]]
 script = ExtResource("1_b54te")
+collectableName = "Werewolf's Claw"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6fgte")

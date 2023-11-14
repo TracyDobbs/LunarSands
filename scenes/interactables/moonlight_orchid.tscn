@@ -23,6 +23,7 @@ size = Vector2(16, 16.0625)
 
 [node name="MoonlightOrchid" type="StaticBody2D" groups=["Collectable"]]
 script = ExtResource("1_76lcd")
+collectableName = "Moonlight Orchid"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_urccd")
