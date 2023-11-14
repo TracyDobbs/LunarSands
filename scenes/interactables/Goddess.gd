@@ -9,6 +9,7 @@ var player: CharacterBody2D
 
 # State Variables
 var playerInRange: bool = false
+var isTalking: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,7 +18,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if isTalking:
+		$AnimatedSprite2D.play("talking")
+	else:
+		$AnimatedSprite2D.play("idle")
 	
 func _on_area_2d_body_entered(body):
 	if (!body.is_in_group("Player")):

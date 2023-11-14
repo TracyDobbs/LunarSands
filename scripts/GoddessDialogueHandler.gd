@@ -22,6 +22,7 @@ func _process(delta):
 		ui = get_parent().ui
 	
 func determine_dialogue_options():
+	get_parent().isTalking = true
 	if (GlobalScript.inventory.has("TestCollectable")):
 		has_test_collectable()
 		return
@@ -48,6 +49,7 @@ func has_test_collectable():
 		await progress_dialogue
 	
 	ui.dialogue_mode(false)
+	get_parent().isTalking = false
 	
 func _input(event):
 	if (event.is_action_pressed("progress")):

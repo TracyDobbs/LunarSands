@@ -1,16 +1,34 @@
-[gd_scene load_steps=14 format=3 uid="uid://wn2i2esv1f3i"]
+[gd_scene load_steps=32 format=3 uid="uid://wn2i2esv1f3i"]
 
 [ext_resource type="Script" path="res://scripts/Werewolf.gd" id="1_845eo"]
-[ext_resource type="Texture2D" uid="uid://ckqvmq85ixvd3" path="res://sprites/placeholders/mc_werewolf/Wolf_South/MC_Wolf_South1.png" id="2_x0q8k"]
-[ext_resource type="Texture2D" uid="uid://csfq24nu2d3ux" path="res://sprites/placeholders/mc_werewolf/Wolf_South/MC_Wolf_South2.png" id="3_w2ee1"]
-[ext_resource type="Texture2D" uid="uid://b6v4u5wefpltn" path="res://sprites/placeholders/mc_werewolf/Wolf_South/MC_Wolf_South3.png" id="4_hf61j"]
-[ext_resource type="Texture2D" uid="uid://cl8l0otgptwqi" path="res://sprites/placeholders/mc_werewolf/Wolf_South/MC_Wolf_South4.png" id="5_ydxh7"]
-[ext_resource type="Texture2D" uid="uid://dpv147y7v6cdh" path="res://sprites/placeholders/mc_werewolf/Wolf_South/MC_Wolf_South5.png" id="6_domk4"]
-[ext_resource type="Texture2D" uid="uid://c45qeebv2fo4j" path="res://sprites/placeholders/mc_werewolf/Wolf_South/MC_Wolf_South6.png" id="7_rumcb"]
+[ext_resource type="Texture2D" uid="uid://ck5kqhw7th1lw" path="res://sprites/Animation_Sets/Wolf_South/MC_Wolf_South1.png" id="2_x4mqd"]
+[ext_resource type="Texture2D" uid="uid://dpha2s28q2o87" path="res://sprites/Animation_Sets/Wolf_South/MC_Wolf_South2.png" id="3_kpn2k"]
+[ext_resource type="Texture2D" uid="uid://ckobscomp6qpk" path="res://sprites/Animation_Sets/Wolf_South/MC_Wolf_South3.png" id="4_ued62"]
+[ext_resource type="Texture2D" uid="uid://dgvsf1w7e58n" path="res://sprites/Animation_Sets/Wolf_South/MC_Wolf_South4.png" id="5_wmono"]
+[ext_resource type="Texture2D" uid="uid://cnv4o2itaybbf" path="res://sprites/Animation_Sets/Wolf_South/MC_Wolf_South5.png" id="6_y4bnq"]
+[ext_resource type="Texture2D" uid="uid://eqiheed08k2u" path="res://sprites/Animation_Sets/Wolf_South/MC_Wolf_South6.png" id="7_tek4t"]
 [ext_resource type="Texture2D" uid="uid://sfvbkheyspm1" path="res://sprites/placeholders/mc_werewolf/Wolf_Idle/MC_Wolf1.png" id="8_xg1n0"]
 [ext_resource type="Texture2D" uid="uid://u84dpti88xci" path="res://sprites/placeholders/mc_werewolf/Wolf_Idle/MC_Wolf2.png" id="9_6garv"]
 [ext_resource type="Texture2D" uid="uid://txy5o8rsqgn" path="res://sprites/placeholders/mc_werewolf/Wolf_Idle/MC_Wolf3.png" id="10_0ewja"]
 [ext_resource type="Texture2D" uid="uid://dusqcwx6ou26b" path="res://sprites/placeholders/mc_werewolf/Wolf_Idle/MC_Wolf4.png" id="11_vbxiq"]
+[ext_resource type="Texture2D" uid="uid://bso606lt0d5tb" path="res://sprites/Animation_Sets/Wolf_West/MC_Wolf_West1.png" id="12_22bht"]
+[ext_resource type="Texture2D" uid="uid://3ye317s7hah7" path="res://sprites/Animation_Sets/Wolf_West/MC_Wolf_West2.png" id="13_racog"]
+[ext_resource type="Texture2D" uid="uid://wi3ounhkbqsd" path="res://sprites/Animation_Sets/Wolf_West/MC_Wolf_West3.png" id="14_go85n"]
+[ext_resource type="Texture2D" uid="uid://fhxhrajbyg3" path="res://sprites/Animation_Sets/Wolf_West/MC_Wolf_West4.png" id="15_88jbo"]
+[ext_resource type="Texture2D" uid="uid://cxpfihd26ix1r" path="res://sprites/Animation_Sets/Wolf_West/MC_Wolf_West5.png" id="16_vb8un"]
+[ext_resource type="Texture2D" uid="uid://cm5pcybep7pu0" path="res://sprites/Animation_Sets/Wolf_West/MC_Wolf_West6.png" id="17_q6xnc"]
+[ext_resource type="Texture2D" uid="uid://bac0cj4ewvmoe" path="res://sprites/Animation_Sets/Wolf_East/MC_Wolf_East1.png" id="18_tft7h"]
+[ext_resource type="Texture2D" uid="uid://cpom8qhktslqr" path="res://sprites/Animation_Sets/Wolf_East/MC_Wolf_East2.png" id="19_npsnt"]
+[ext_resource type="Texture2D" uid="uid://cj1ryhtt0l2h6" path="res://sprites/Animation_Sets/Wolf_East/MC_Wolf_East3.png" id="20_tda17"]
+[ext_resource type="Texture2D" uid="uid://cec8hbjawqwut" path="res://sprites/Animation_Sets/Wolf_East/MC_Wolf_East4.png" id="21_hjn3n"]
+[ext_resource type="Texture2D" uid="uid://df3gnluy0n0xf" path="res://sprites/Animation_Sets/Wolf_East/MC_Wolf_East5.png" id="22_x2kl6"]
+[ext_resource type="Texture2D" uid="uid://d08258f7bntu0" path="res://sprites/Animation_Sets/Wolf_East/MC_Wolf_East6.png" id="23_qplww"]
+[ext_resource type="Texture2D" uid="uid://bw1tf2lx0cjrt" path="res://sprites/Animation_Sets/Wolf_North/MC_Wolf_North1.png" id="24_now10"]
+[ext_resource type="Texture2D" uid="uid://cwldyu1nn1j6l" path="res://sprites/Animation_Sets/Wolf_North/MC_Wolf_North2.png" id="25_yklmi"]
+[ext_resource type="Texture2D" uid="uid://b6mbxxv3kdy2i" path="res://sprites/Animation_Sets/Wolf_North/MC_Wolf_North3.png" id="26_l4n5k"]
+[ext_resource type="Texture2D" uid="uid://cmijymppfyweq" path="res://sprites/Animation_Sets/Wolf_North/MC_Wolf_North4.png" id="27_qghux"]
+[ext_resource type="Texture2D" uid="uid://b60f40ehiwj2i" path="res://sprites/Animation_Sets/Wolf_North/MC_Wolf_North5.png" id="28_qksgh"]
+[ext_resource type="Texture2D" uid="uid://ce3x8v8hpoyuc" path="res://sprites/Animation_Sets/Wolf_North/MC_Wolf_North6.png" id="29_b1384"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8en3"]
 size = Vector2(19, 29)
@@ -24,26 +42,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_x0q8k")
+"texture": ExtResource("2_x4mqd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_w2ee1")
+"texture": ExtResource("3_kpn2k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_hf61j")
+"texture": ExtResource("4_ued62")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_ydxh7")
+"texture": ExtResource("5_wmono")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_domk4")
+"texture": ExtResource("6_y4bnq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_rumcb")
+"texture": ExtResource("7_tek4t")
 }],
 "loop": true,
 "name": &"down",
-"speed": 15.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -60,76 +78,76 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_x0q8k")
+"texture": ExtResource("12_22bht")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_w2ee1")
+"texture": ExtResource("13_racog")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_hf61j")
+"texture": ExtResource("14_go85n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_ydxh7")
+"texture": ExtResource("15_88jbo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_domk4")
+"texture": ExtResource("16_vb8un")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_rumcb")
+"texture": ExtResource("17_q6xnc")
 }],
 "loop": true,
 "name": &"left",
-"speed": 15.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_x0q8k")
+"texture": ExtResource("18_tft7h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_w2ee1")
+"texture": ExtResource("19_npsnt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_hf61j")
+"texture": ExtResource("20_tda17")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_ydxh7")
+"texture": ExtResource("21_hjn3n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_domk4")
+"texture": ExtResource("22_x2kl6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_rumcb")
+"texture": ExtResource("23_qplww")
 }],
 "loop": true,
 "name": &"right",
-"speed": 15.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_x0q8k")
+"texture": ExtResource("24_now10")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_w2ee1")
+"texture": ExtResource("25_yklmi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_hf61j")
+"texture": ExtResource("26_l4n5k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_ydxh7")
+"texture": ExtResource("27_qghux")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_domk4")
+"texture": ExtResource("28_qksgh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_rumcb")
+"texture": ExtResource("29_b1384")
 }],
 "loop": true,
 "name": &"up",
-"speed": 15.0
+"speed": 10.0
 }]
 
 [node name="Werewolf" type="CharacterBody2D" node_paths=PackedStringArray("sprite") groups=["Player"]]
@@ -145,4 +163,5 @@ shape = SubResource("RectangleShape2D_n8en3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bgxfi")
-animation = &"idle"
+animation = &"right"
+frame_progress = 0.160652
