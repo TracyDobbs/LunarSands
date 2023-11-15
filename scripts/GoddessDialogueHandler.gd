@@ -75,6 +75,7 @@ func has_one_item():
 	
 	# Dynamically update lines based on current inventory
 	lines[0] = lines[0] + " " + GlobalScript.inventory[0]
+	lines[1] = lines[1] + " " + GlobalScript.missingItems[0] + " and " + GlobalScript.missingItems[1]
 	
 	# Enter dialogue mode
 	ui.dialogue_mode(true)
@@ -94,7 +95,8 @@ func has_one_item():
 func has_two_items():
 	file = FileAccess.open(two_items, FileAccess.READ) # Open and read the provided text file
 	lines = file.get_as_text().split("\n")
-	lines[0] = lines[0] + " " + GlobalScript.inventory[0] + " and " + GlobalScript.inventory[1]
+	lines[0] = lines[0] + " " + GlobalScript.inventory[0] + " and " + GlobalScript.inventory[1] + "."
+	lines[1] = lines[1] + " " + GlobalScript.missingItems[0] + "."
 	
 		# Enter dialogue mode
 	ui.dialogue_mode(true)

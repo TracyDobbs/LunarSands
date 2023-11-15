@@ -27,6 +27,5 @@ func _physics_process(delta):
 
 # This retrieves the player data
 func get_player():
-	if (get_tree().root.get_child(0) != null):
-		#print(get_tree().root.get_child(0).get_player())
-		return get_tree().root.get_child(0).get_player()
+	if (get_tree().current_scene.find_child("PlayerHandler") != null):
+		return get_tree().current_scene.find_child("PlayerHandler")

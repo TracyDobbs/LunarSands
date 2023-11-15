@@ -1,5 +1,8 @@
 extends Node
 
+# Player reference
+var player
+
 # Complete inventory
 var completeInventory: Array[String]
 

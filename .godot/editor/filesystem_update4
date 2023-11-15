@@ -7,5 +7,15 @@ res://scenes/ui/ui.tscn
 res://scenes/interactables/moonlight_orchid.tscn
 res://scenes/interactables/werewolfs_claw.tscn
 res://scenes/interactables/wolfsbane.tscn
-res://scenes/interactables/Collectable.gd
+res://dialogues/goddess/PlayerHasNoItems.txt
+res://dialogues/goddess/PlayerHasOneItem.txt
+res://dialogues/goddess/PlayerHasTwoItems.txt
+res://scenes/levels/intro_scene.tscn
+res://scripts/IntroSceneComplete.gd
+res://scenes/levels/intro_level.tscn
+res://scenes/levels/level01.tscn
+res://scenes/levels/level02.tscn
+res://scenes/npcs/enemies/enemy.tscn
+res://scenes/npcs/ai/pathfinding.tscn
 res://scripts/GlobalScript.gd
+res://scripts/EnemyRayCast2D.gd
