@@ -43,22 +43,22 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.75,
 "texture": ExtResource("2_x4mqd")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("3_kpn2k")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("4_ued62")
 }, {
-"duration": 1.0,
+"duration": 0.75,
 "texture": ExtResource("5_wmono")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("6_y4bnq")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("7_tek4t")
 }],
 "loop": true,
@@ -83,22 +83,22 @@ animations = [{
 "speed": 6.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.75,
 "texture": ExtResource("12_22bht")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("13_racog")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("14_go85n")
 }, {
-"duration": 1.0,
+"duration": 0.75,
 "texture": ExtResource("15_88jbo")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("16_vb8un")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("17_q6xnc")
 }],
 "loop": true,
@@ -106,22 +106,22 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.75,
 "texture": ExtResource("18_tft7h")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("19_npsnt")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("20_tda17")
 }, {
-"duration": 1.0,
+"duration": 0.75,
 "texture": ExtResource("21_hjn3n")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("22_x2kl6")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("23_qplww")
 }],
 "loop": true,
@@ -129,22 +129,22 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.75,
 "texture": ExtResource("24_now10")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("25_yklmi")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("26_l4n5k")
 }, {
-"duration": 1.0,
+"duration": 0.75,
 "texture": ExtResource("27_qghux")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("28_qksgh")
 }, {
-"duration": 2.0,
+"duration": 1.5,
 "texture": ExtResource("29_b1384")
 }],
 "loop": true,
@@ -165,8 +165,9 @@ shape = SubResource("RectangleShape2D_n8en3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bgxfi")
-animation = &"up"
-frame_progress = 0.151601
+animation = &"down"
+frame = 4
+frame_progress = 0.00951153
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("30_lfggq")

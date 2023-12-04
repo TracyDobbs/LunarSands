@@ -41,22 +41,22 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("2_7hy3s")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("3_1xh8f")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("4_rcefo")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("5_r1lml")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("6_p7v5u")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("7_stjw8")
 }],
 "loop": true,
@@ -81,22 +81,22 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("12_66413")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("13_rtaby")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("14_e74oi")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("15_u73hl")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("16_b2oui")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("17_3lpf3")
 }],
 "loop": true,
@@ -104,22 +104,22 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("18_0cnui")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("19_7pxnb")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("20_3bkcf")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("21_qulge")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("22_yjm72")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("23_c6gbk")
 }],
 "loop": true,
@@ -127,22 +127,22 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("24_3cx06")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("25_02fhv")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("26_v8bo7")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("27_5j7ka")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("28_yvj0p")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": ExtResource("29_ix5ha")
 }],
 "loop": true,
@@ -163,8 +163,8 @@ sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ta702")
-animation = &"idle"
-frame_progress = 0.445407
+animation = &"up"
+frame_progress = 0.849276
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 light_mask = 2
