@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://k24k6oqklnrf"]
+[gd_scene load_steps=3 format=3 uid="uid://k24k6oqklnrf"]
 
 [ext_resource type="Script" path="res://trap.gd" id="1_ccdti"]
-[ext_resource type="Texture2D" uid="uid://brtsq4rnwmw1h" path="res://tiles/trap_placeholder.jpeg" id="2_cr0q1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1su5h"]
 size = Vector2(53.9187, 45.5076)
@@ -16,6 +15,5 @@ shape = SubResource("RectangleShape2D_1su5h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.0427982, 0.0606953)
-texture = ExtResource("2_cr0q1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
