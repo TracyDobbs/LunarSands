@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c2miotr1pqd1"]
+[gd_scene load_steps=10 format=3 uid="uid://c2miotr1pqd1"]
 
 [ext_resource type="PackedScene" uid="uid://ce7upepng8cjm" path="res://scenes/ui/ui.tscn" id="1_440be"]
 [ext_resource type="TileSet" uid="uid://b86rglu32y6vy" path="res://tiles/resources/DungeonTileSet_v2.6.tres" id="2_bduf0"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/FollowPlayer.gd" id="4_sua2o"]
 [ext_resource type="PackedScene" uid="uid://dtc11cxmfaqgl" path="res://interactables/level_change_zone.tscn" id="5_h86mu"]
 [ext_resource type="PackedScene" uid="uid://k24k6oqklnrf" path="res://trap.tscn" id="6_mdw5h"]
+[ext_resource type="AudioStream" uid="uid://clwb4wt7bbrmi" path="res://sounds/moonlight.mp3" id="7_ty848"]
 
 [sub_resource type="GDScript" id="GDScript_qmig3"]
 script/source = "extends Timer
@@ -66,6 +67,9 @@ shape = SubResource("RectangleShape2D_n68lv")
 [node name="Trap" parent="." instance=ExtResource("6_mdw5h")]
 position = Vector2(-512, -32)
 scale = Vector2(3, 1.515)
+
+[node name="MoonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ty848")
 
 [connection signal="playerInteracted" from="PlayerHandler" to="PlayerHandler" method="_on_player_interacted"]
 [connection signal="timeout" from="PlayerHandler/Timer" to="PlayerHandler" method="_on_timer_timeout"]

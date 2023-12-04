@@ -11,6 +11,7 @@ var movDirY: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$AudioStreamPlayer.play()
 	#print("Player is WEREWOLF!")
 	pass
 
