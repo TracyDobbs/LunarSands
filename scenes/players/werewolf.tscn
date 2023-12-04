@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://wn2i2esv1f3i"]
+[gd_scene load_steps=34 format=3 uid="uid://wn2i2esv1f3i"]
 
 [ext_resource type="Script" path="res://scripts/Werewolf.gd" id="1_845eo"]
 [ext_resource type="Texture2D" uid="uid://ck5kqhw7th1lw" path="res://sprites/Animation_Sets/Wolf_South/MC_Wolf_South1.png" id="2_x4mqd"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://b60f40ehiwj2i" path="res://sprites/Animation_Sets/Wolf_North/MC_Wolf_North5.png" id="28_qksgh"]
 [ext_resource type="Texture2D" uid="uid://ce3x8v8hpoyuc" path="res://sprites/Animation_Sets/Wolf_North/MC_Wolf_North6.png" id="29_b1384"]
 [ext_resource type="AudioStream" uid="uid://clwb4wt7bbrmi" path="res://sounds/moonlight.mp3" id="30_lfggq"]
+[ext_resource type="AudioStream" uid="uid://d0acaevyjq2dv" path="res://sounds/footstep_human.mp3" id="31_x1snr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8en3"]
 size = Vector2(19, 29)
@@ -169,3 +170,9 @@ frame_progress = 0.151601
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("30_lfggq")
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+
+[node name="WalkSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_x1snr")

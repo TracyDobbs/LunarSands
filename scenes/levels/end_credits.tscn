@@ -1,0 +1,107 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpi70ypue3sme"]
+
+[ext_resource type="Texture2D" uid="uid://be2l5bhlu2nju" path="res://sprites/Solid_black.png" id="1_0lela"]
+[ext_resource type="Texture2D" uid="uid://bkiaover1p7ud" path="res://sprites/LunarSandsCredits.png" id="1_1l7lh"]
+[ext_resource type="Texture2D" uid="uid://2gyjual266y" path="res://sprites/moon_3.jpg" id="2_u5stm"]
+[ext_resource type="AudioStream" uid="uid://dpokfcccd5ljp" path="res://sounds/voice-of-desert-medieval-cinematic-history-trailer-146677.mp3" id="4_xayul"]
+
+[sub_resource type="Animation" id="Animation_rdlcl"]
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Credits_text:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(575, 1977), Vector2(575, -875)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Moon:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wawy2"]
+resource_name = "end_credits"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Credits_text:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 28.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(578, 2009), Vector2(578, -850)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Moon:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0.509804, 0.509804, 0.509804, 1)]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_xayul")
+}],
+"times": PackedFloat32Array(-2.4)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gckha"]
+_data = {
+"RESET": SubResource("Animation_rdlcl"),
+"end_credits": SubResource("Animation_wawy2")
+}
+
+[node name="EndCredits" type="Node2D"]
+
+[node name="black" type="Sprite2D" parent="."]
+position = Vector2(572, 177)
+texture = ExtResource("1_0lela")
+
+[node name="Moon" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(579, 317)
+scale = Vector2(0.828431, 0.828431)
+texture = ExtResource("2_u5stm")
+
+[node name="EndCredit_anim" type="AnimationPlayer" parent="."]
+autoplay = "end_credits"
+libraries = {
+"": SubResource("AnimationLibrary_gckha")
+}
+
+[node name="Credits_text" type="Sprite2D" parent="."]
+position = Vector2(575, 1977)
+scale = Vector2(0.749667, 0.749667)
+texture = ExtResource("1_1l7lh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
