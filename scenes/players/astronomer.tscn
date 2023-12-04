@@ -156,7 +156,7 @@ size = Vector2(15, 29)
 [sub_resource type="CircleShape2D" id="CircleShape2D_l66k1"]
 radius = 21.0238
 
-[node name="Astronomer" type="CharacterBody2D" node_paths=PackedStringArray("sprite") groups=["Player"]]
+[node name="Astronomer" type="CharacterBody2D" node_paths=PackedStringArray("sprite") groups=["Human", "Player"]]
 position = Vector2(503, 284)
 script = ExtResource("1_pdj4m")
 sprite = NodePath("AnimatedSprite2D")
