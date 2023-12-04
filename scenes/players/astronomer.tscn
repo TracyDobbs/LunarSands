@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://de2wwqhvy1if0"]
+[gd_scene load_steps=35 format=3 uid="uid://de2wwqhvy1if0"]
 
 [ext_resource type="Script" path="res://scripts/Astronomer.gd" id="1_pdj4m"]
 [ext_resource type="Texture2D" uid="uid://crrearrwsdqby" path="res://sprites/Animation_Sets/Human_South/Walking_South1.png" id="2_7hy3s"]
@@ -29,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://cgql7s65nv0rc" path="res://sprites/Animation_Sets/Human_North/Walking_North4.png" id="27_5j7ka"]
 [ext_resource type="Texture2D" uid="uid://rk0b1ovb8jin" path="res://sprites/Animation_Sets/Human_North/Walking_North5.png" id="28_yvj0p"]
 [ext_resource type="Texture2D" uid="uid://cq2ia0hru4hie" path="res://sprites/Animation_Sets/Human_North/Walking_North6.png" id="29_ix5ha"]
+[ext_resource type="AudioStream" uid="uid://ceus1ju0jdk24" path="res://sounds/itempickup.mp3" id="30_1uhfr"]
+[ext_resource type="AudioStream" uid="uid://d0acaevyjq2dv" path="res://sounds/footstep_human.mp3" id="31_3q7bx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ta702"]
 animations = [{
@@ -174,5 +176,13 @@ shape = SubResource("RectangleShape2D_gj5wx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_l66k1")
+
+[node name="ItemGrab" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_1uhfr")
+volume_db = -28.984
+pitch_scale = 0.89
+
+[node name="Footsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_3q7bx")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

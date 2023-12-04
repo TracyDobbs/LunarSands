@@ -1,3 +1,4 @@
+AudioStreamPlayer
 Marker2D
 Node
 TileMap
@@ -8,7 +9,6 @@ StaticBody2D
 Area2D
 CharacterBody2D
 AnimationPlayer
-AudioStreamPlayer
 Label
 Node2D
 Timer

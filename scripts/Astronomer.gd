@@ -22,7 +22,7 @@ func _handleInput():
 	movDirY = moveDirection.y
 	
 	velocity = moveDirection * speed
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	_handleInput()
@@ -58,3 +58,4 @@ func _on_area_2d_body_entered(body):
 	print(body)
 	if body.is_in_group("Collectable"):
 		GlobalScript.add_to_inventory(body)
+		$ItemGrab.play()

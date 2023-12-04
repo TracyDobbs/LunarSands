@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlhoiy5ix8xye"]
+[gd_scene load_steps=5 format=3 uid="uid://dlhoiy5ix8xye"]
 
+[ext_resource type="AudioStream" uid="uid://clwb4wt7bbrmi" path="res://sounds/moonlight.mp3" id="2_coese"]
 [ext_resource type="Texture2D" uid="uid://bw87i4sje2ain" path="res://interactables/placeholders/MoonlightPlaceholder.png" id="2_fpu58"]
 
 [sub_resource type="GDScript" id="GDScript_mseqg"]
@@ -12,6 +13,7 @@ signal playerEnteredMoonlight
 func _on_area_body_entered(body):
 	print(\"Body entered area...\")
 	playerEnteredMoonlight.emit()
+	$MoonSound.play()
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncdqq"]
@@ -27,5 +29,8 @@ shape = SubResource("RectangleShape2D_ncdqq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_fpu58")
+
+[node name="MoonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_coese")
 
 [connection signal="body_entered" from="Area" to="." method="_on_area_body_entered"]

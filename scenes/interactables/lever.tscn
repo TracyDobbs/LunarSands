@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c2dd680hfbv4b" path="res://interactables/placeholders/lever/leverOff.png" id="2_48xvb"]
 [ext_resource type="Texture2D" uid="uid://b6olgv3u3i08v" path="res://interactables/placeholders/lever/leverOn.png" id="3_l5gjl"]
 [ext_resource type="PackedScene" uid="uid://x604bx5ud76o" path="res://scenes/ui/interact_prompt.tscn" id="4_h2gpn"]
-[ext_resource type="AudioStream" uid="uid://bm8kr24s4l2ye" path="res://sounds/lever_sound.mp3" id="5_qlqm7"]
+[ext_resource type="AudioStream" uid="uid://cwhcnug2i3cwi" path="res://sounds/lever.mp3" id="5_hexav"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bmvbm"]
 radius = 51.44
@@ -50,7 +50,7 @@ shape = SubResource("RectangleShape2D_1outf")
 position = Vector2(0, -94)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_qlqm7")
+stream = ExtResource("5_hexav")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="body_entered" from="Area" to="." method="_on_area_body_entered"]
