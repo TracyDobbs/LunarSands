@@ -62,7 +62,7 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 4.0,
 "texture": ExtResource("8_7isjp")
 }, {
 "duration": 1.0,
@@ -161,9 +161,8 @@ sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ta702")
-animation = &"up"
-frame = 2
-frame_progress = 0.661159
+animation = &"idle"
+frame_progress = 0.445407
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 light_mask = 2
