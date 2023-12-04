@@ -165,7 +165,7 @@ shape = SubResource("RectangleShape2D_n8en3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bgxfi")
 animation = &"up"
-frame_progress = 0.795001
+frame_progress = 0.151601
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("30_lfggq")
