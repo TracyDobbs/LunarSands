@@ -5,6 +5,9 @@ var speed: int = 50
 var movDirX: int
 var movDirY: int
 
+
+
+
 # Sprite animation
 @export var sprite: AnimatedSprite2D
 
@@ -22,6 +25,7 @@ func _handleInput():
 	movDirY = moveDirection.y
 	
 	velocity = moveDirection * speed
+	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -44,6 +48,11 @@ func _physics_process(delta):
 	if (!Input.is_anything_pressed()):
 		if (movDirX == 0 && movDirY == 0):
 			sprite.play("idle")
+	else:
+		if $Timer.time_left <=0:
+			$WalkSound.pitch_scale = randf_range(0.8, 1.2)
+			$WalkSound.play()
+			$Timer.start(0.3)
 
 		
 func die():

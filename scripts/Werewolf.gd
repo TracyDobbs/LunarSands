@@ -6,6 +6,9 @@ var speed: int = 100
 var movDirX: int
 var movDirY: int
 
+
+
+		
 # Sprite animation
 @export var sprite: AnimatedSprite2D
 
@@ -28,6 +31,8 @@ func _physics_process(delta):
 	_handleInput()
 	move_and_slide()
 	
+	
+	
 	# Resets the level upon pressing ENTER
 	if Input.is_action_just_pressed("enter"):
 		get_tree().reload_current_scene()
@@ -44,6 +49,12 @@ func _physics_process(delta):
 	if (!Input.is_anything_pressed()):
 		if (movDirX == 0 && movDirY == 0):
 			sprite.play("idle")
+	else:
+		if $Timer2.time_left <=0:
+			$WalkSound.pitch_scale = randf_range(0.6, 0.8)
+			$WalkSound.play()
+			$Timer2.start(0.3)
+
 		
 func die():
 	get_tree().reload_current_scene()

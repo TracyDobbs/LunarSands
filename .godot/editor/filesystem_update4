@@ -11,3 +11,5 @@ res://scenes/zones/moonlight.tscn
 res://scripts/PlayerStateHandler.gd
 res://scenes/players/werewolf.tscn
 res://scripts/Werewolf.gd
+res://scripts/Astronomer.gd
+res://trap.tscn
