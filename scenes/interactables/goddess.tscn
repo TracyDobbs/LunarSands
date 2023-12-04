@@ -15,22 +15,22 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_eyu78"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 24.0,
 "texture": ExtResource("2_tmiuj")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("3_1y340")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("4_n1cxq")
 }, {
-"duration": 1.0,
+"duration": 8.0,
 "texture": ExtResource("5_vn5lj")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("6_8v0b5")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("7_jj580")
 }],
 "loop": true,
@@ -38,10 +38,10 @@ animations = [{
 "speed": 2.5
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("8_fjdf7")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("9_mu5j3")
 }],
 "loop": true,
@@ -61,7 +61,7 @@ script = ExtResource("1_obthe")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_eyu78")
 animation = &"talking"
-frame_progress = 0.712145
+frame_progress = 0.121651
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)

@@ -64,7 +64,7 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 4.0,
 "texture": ExtResource("8_7isjp")
 }, {
 "duration": 1.0,
@@ -156,16 +156,15 @@ size = Vector2(15, 29)
 [sub_resource type="CircleShape2D" id="CircleShape2D_l66k1"]
 radius = 21.0238
 
-[node name="Astronomer" type="CharacterBody2D" node_paths=PackedStringArray("sprite") groups=["Player"]]
+[node name="Astronomer" type="CharacterBody2D" node_paths=PackedStringArray("sprite") groups=["Human", "Player"]]
 position = Vector2(503, 284)
 script = ExtResource("1_pdj4m")
 sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ta702")
-animation = &"up"
-frame = 2
-frame_progress = 0.661159
+animation = &"idle"
+frame_progress = 0.445407
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 light_mask = 2
