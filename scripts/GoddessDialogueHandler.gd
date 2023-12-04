@@ -132,6 +132,8 @@ func has_all_items():
 	lines.clear()
 	file.close()
 	
+	GlobalScript.change_level("end_credits")
+	
 # Called when an input is detected
 func _input(event):
 	# this checks if the detected input is for the "progress" action

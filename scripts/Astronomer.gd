@@ -50,9 +50,10 @@ func _physics_process(delta):
 			sprite.play("idle")
 	else:
 		if $Timer.time_left <=0:
-			$WalkSound.pitch_scale = randf_range(0.8, 1.2)
-			$WalkSound.play()
-			$Timer.start(0.3)
+			if ((movDirX != 0) || (movDirY != 0)):
+				$WalkSound.pitch_scale = randf_range(0.8, 1.2)
+				$WalkSound.play()
+				$Timer.start(0.3)
 
 		
 func die():
