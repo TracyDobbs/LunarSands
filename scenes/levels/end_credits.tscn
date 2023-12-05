@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cpi70ypue3sme"]
+[gd_scene load_steps=10 format=3 uid="uid://cpi70ypue3sme"]
 
 [ext_resource type="Texture2D" uid="uid://be2l5bhlu2nju" path="res://sprites/Solid_black.png" id="1_0lela"]
 [ext_resource type="Texture2D" uid="uid://bkiaover1p7ud" path="res://sprites/LunarSandsCredits.png" id="1_1l7lh"]
+[ext_resource type="Script" path="res://scripts/EndCreditsComplete.gd" id="1_sb1up"]
 [ext_resource type="Texture2D" uid="uid://2gyjual266y" path="res://sprites/moon_3.jpg" id="2_u5stm"]
 [ext_resource type="AudioStream" uid="uid://dpokfcccd5ljp" path="res://sounds/voice-of-desert-medieval-cinematic-history-trailer-146677.mp3" id="4_xayul"]
+[ext_resource type="PackedScene" uid="uid://ce7upepng8cjm" path="res://scenes/ui/ui.tscn" id="6_1w8l1"]
 
 [sub_resource type="Animation" id="Animation_rdlcl"]
 length = 30.0
@@ -82,6 +84,7 @@ _data = {
 }
 
 [node name="EndCredits" type="Node2D"]
+script = ExtResource("1_sb1up")
 
 [node name="black" type="Sprite2D" parent="."]
 position = Vector2(572, 177)
@@ -105,3 +108,7 @@ scale = Vector2(0.749667, 0.749667)
 texture = ExtResource("1_1l7lh")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("6_1w8l1")]
+
+[connection signal="animation_finished" from="EndCredit_anim" to="." method="_on_end_credit_anim_animation_finished"]

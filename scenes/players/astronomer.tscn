@@ -184,6 +184,7 @@ pitch_scale = 0.89
 
 [node name="WalkSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("31_3q7bx")
+volume_db = -25.0
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

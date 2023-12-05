@@ -177,3 +177,4 @@ one_shot = true
 
 [node name="WalkSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("31_x1snr")
+volume_db = -25.0

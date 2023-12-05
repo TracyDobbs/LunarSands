@@ -78,3 +78,29 @@ size_flags_horizontal = 4
 text = "You died"
 label_settings = SubResource("LabelSettings_b6743")
 uppercase = true
+
+[node name="ReplayOptions" type="MarginContainer" parent="Control/MarginContainer"]
+layout_direction = 2
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/ReplayOptions"]
+layout_mode = 2
+
+[node name="Replay" type="Button" parent="Control/MarginContainer/ReplayOptions/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Replay"
+
+[node name="Quit" type="Button" parent="Control/MarginContainer/ReplayOptions/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Quit"
+
+[connection signal="pressed" from="Control/MarginContainer/ReplayOptions/HBoxContainer/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/ReplayOptions/HBoxContainer/Quit" to="." method="_on_quit_pressed"]

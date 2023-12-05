@@ -1,3 +1,6 @@
+HBoxContainer
+MarginContainer
+Button
 AudioStreamPlayer
 Timer
 Marker2D
@@ -19,7 +22,6 @@ AspectRatioContainer
 BoxContainer
 PanelContainer
 VBoxContainer
-MarginContainer
 Control
 CanvasLayer
 RichTextLabel
@@ -28,5 +30,3 @@ Container
 RayCast2D
 PathFollow2D
 Path2D
-Camera2D
-Polygon2D
