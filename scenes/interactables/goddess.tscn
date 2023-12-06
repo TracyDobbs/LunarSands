@@ -50,7 +50,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jdo2s"]
-size = Vector2(7, 26)
+size = Vector2(29, 36)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jci5j"]
 radius = 39.0512
@@ -63,7 +63,7 @@ sprite_frames = SubResource("SpriteFrames_eyu78")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_jdo2s")
 
 [node name="Area2D" type="Area2D" parent="."]

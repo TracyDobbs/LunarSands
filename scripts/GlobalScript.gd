@@ -37,6 +37,10 @@ func add_to_inventory(item):
 		item.queue_free()
 		print("added " + itemName + " to inventory")
 		
+# call to clear the player inventory
+func clear_inventory():
+	inventory.clear()
+		
 # Returns what items the player needs to have a complete inventory
 func missing_collectables():
 	missingItems.clear()

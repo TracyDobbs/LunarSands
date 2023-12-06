@@ -14,7 +14,7 @@ extends CharacterBody2D
 @export var patrolPoints: Array[Marker2D]
 var tempPoints = patrolPoints
 
-var speed = 100;
+var speed = 75;
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):

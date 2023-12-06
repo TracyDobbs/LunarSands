@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://s5bkw7oqgolm"]
+[gd_scene load_steps=10 format=3 uid="uid://s5bkw7oqgolm"]
 
 [ext_resource type="PackedScene" uid="uid://ce7upepng8cjm" path="res://scenes/ui/ui.tscn" id="1_aqcjc"]
+[ext_resource type="Script" path="res://scripts/LevelCollectableCheck.gd" id="1_coj0n"]
 [ext_resource type="TileSet" uid="uid://b86rglu32y6vy" path="res://tiles/resources/DungeonTileSet_v2.6.tres" id="2_21gkl"]
 [ext_resource type="Script" path="res://scripts/PlayerStateHandler.gd" id="3_qw717"]
 [ext_resource type="Script" path="res://scripts/FollowPlayer.gd" id="4_ckxxj"]
 [ext_resource type="PackedScene" uid="uid://dtc11cxmfaqgl" path="res://interactables/level_change_zone.tscn" id="5_5rysg"]
 [ext_resource type="PackedScene" uid="uid://dw2ps04ckfuwm" path="res://scenes/npcs/enemies/enemy.tscn" id="6_1jlva"]
+[ext_resource type="PackedScene" uid="uid://xyllpg4dl21k" path="res://scenes/interactables/wolfsbane.tscn" id="7_wc7w1"]
 
 [sub_resource type="GDScript" id="GDScript_wjs6e"]
 script/source = "extends Timer
@@ -20,10 +22,8 @@ func _process(delta):
 	pass
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_urofa"]
-size = Vector2(42, 83)
-
 [node name="Level02" type="Node2D"]
+script = ExtResource("1_coj0n")
 
 [node name="UI" parent="." instance=ExtResource("1_aqcjc")]
 
@@ -56,11 +56,8 @@ script = SubResource("GDScript_wjs6e")
 position = Vector2(1, 63)
 rotation = 1.5708
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_urofa")
-
 [node name="LevelChangeZone" parent="." instance=ExtResource("5_5rysg")]
-position = Vector2(60, -772)
+position = Vector2(-21, 46)
 levelName = "intro_level"
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("patrolPoints") instance=ExtResource("6_1jlva")]
@@ -83,6 +80,9 @@ position = Vector2(-114, -254)
 
 [node name="Marker2D5" type="Marker2D" parent="patrol points"]
 position = Vector2(-251, -648)
+
+[node name="Wolfsbane" parent="." instance=ExtResource("7_wc7w1")]
+position = Vector2(161, -767)
 
 [connection signal="playerInteracted" from="PlayerHandler" to="PlayerHandler" method="_on_player_interacted"]
 [connection signal="timeout" from="PlayerHandler/Timer" to="PlayerHandler" method="_on_timer_timeout"]

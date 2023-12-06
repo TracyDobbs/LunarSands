@@ -69,3 +69,4 @@ func _on_area_2d_body_entered(body):
 	if body.is_in_group("Collectable"):
 		GlobalScript.add_to_inventory(body)
 		$ItemGrab.play()
+		GlobalScript.change_level("intro_level")
